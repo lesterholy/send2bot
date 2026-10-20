@@ -1,0 +1,74 @@
+{
+  "manifest_version": 3,
+  "name": "PlanA JSON to Memos",
+  "version": "0.2.1",
+  "description": "在 X/Twitter 与生财有术上复制 JSON，并保存为私有 Memos 笔记",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://x.com/*",
+    "*://twitter.com/*",
+    "*://www.x.com/*",
+    "*://www.twitter.com/*",
+    "*://mobile.x.com/*",
+    "*://mobile.twitter.com/*",
+    "https://scys.com/*",
+    "https://www.scys.com/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://x.com/*",
+        "*://twitter.com/*",
+        "*://www.x.com/*",
+        "*://www.twitter.com/*",
+        "*://mobile.x.com/*",
+        "*://mobile.twitter.com/*",
+        "https://scys.com/*",
+        "https://www.scys.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["page.js"],
+      "matches": [
+        "*://x.com/*",
+        "*://twitter.com/*",
+        "*://www.x.com/*",
+        "*://www.twitter.com/*",
+        "*://mobile.x.com/*",
+        "*://mobile.twitter.com/*",
+        "https://scys.com/*",
+        "https://www.scys.com/*"
+      ]
+    }
+  ],
+  "options_page": "options/options.html",
+  "background": {
+    "service_worker": "background.js"
+  }
+}

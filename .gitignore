@@ -1,0 +1,168 @@
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows System Files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux System Files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Editor & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Node.js (if added in future)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+.env
+.env.test
+.cache
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+lib-cov
+coverage/
+*.lcov
+.nyc_output
+.grunt
+bower_components
+.lock-wscript
+build/Release
+
+# Optional packages
+jspm_packages/
+web_modules/
+*.tsbuildinfo
+.npm
+.eslintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Build outputs (if added)
+dist/
+build/
+*.zip
+*.crx
+*.pem
+planA.zip
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Claude Code specific
+.claude/
+
+# Personal notes (optional)
+notes.md
+TODO.txt
+personal/
+
+# Sensitive data (DO NOT COMMIT)
+secrets/
+*.env
+*.env.local
+*.env.*.local
+credentials.json
+config.local.js
+
+# Browser extension packaging
+*.crx
+*.pem
+*.xpi
+web-ext-artifacts/
+
+# Screenshots with personal info (until reviewed)
+# Uncomment if you want to review screenshots before committing
+# screenshots/*.png
+# screenshots/*.jpg
+# screenshots/*.gif
+
+# Development only files
+test.html
+debug.js
+sandbox/
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# OS-specific
+.Spotlight-V100
+.Trashes

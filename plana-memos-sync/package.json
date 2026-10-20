@@ -1,0 +1,16 @@
+{
+  "name": "plana-memos-sync",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "plana-memos-sync": "./bin/plana-memos-sync.js"
+  },
+  "scripts": {
+    "check": "node --check bin/plana-memos-sync.js && node --check src/sync.js && node --check test/smoke.js",
+    "test": "node test/smoke.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

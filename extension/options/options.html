@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlanA 设置</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+      background: #f7f7f8;
+      color: #222;
+      padding: 16px;
+    }
+
+    .container {
+      max-width: 560px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 16px 18px 12px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .content {
+      padding: 16px 18px 18px;
+    }
+
+    .section {
+      margin-bottom: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="url"],
+    .form-group textarea {
+      width: 100%;
+      min-height: 44px;
+      padding: 9px 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.2s;
+      font-family: inherit;
+      resize: vertical;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      min-height: 44px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #333;
+    }
+
+    .alert {
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 14px;
+      display: none;
+    }
+
+    .alert.show {
+      display: block;
+    }
+
+    .alert-success {
+      background: #d1fae5;
+      color: #065f46;
+      border: 1px solid #6ee7b7;
+    }
+
+    .alert-info {
+      background: #dbeafe;
+      color: #1e40af;
+      border: 1px solid #93c5fd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>PlanA 设置</h1>
+    </div>
+
+    <div class="content">
+      <div id="alert" class="alert"></div>
+
+      <!-- Memos 配置 -->
+      <div class="section">
+        <div class="form-group">
+          <label for="apiUrl">Memos API 地址</label>
+          <input type="url" id="apiUrl" placeholder="https://memos.example.com/api/v1">
+        </div>
+
+        <div class="form-group">
+          <label for="accessToken">Memos Access Token</label>
+          <textarea id="accessToken" rows="3" placeholder="粘贴 memos_pat_..."></textarea>
+        </div>
+      </div>
+
+      <!-- 保存按钮 -->
+      <div class="btn-group">
+        <button class="btn btn-primary" id="btnSave">保存</button>
+        <button class="btn btn-secondary" id="btnReset">恢复默认</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
